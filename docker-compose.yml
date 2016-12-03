@@ -10,4 +10,4 @@ services:
     environment:
       LDAP_URL: ldap://ldap:389
   ldap:
-    image: rschaeuble/openldap-server:0.1.0
+    image: rschaeuble/openldap-server:v1
