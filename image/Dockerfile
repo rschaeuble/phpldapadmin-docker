@@ -4,8 +4,6 @@ FROM ubuntu:xenial
 # otherwise there is an error message about a missing apache files.
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install \
-      man \
-      nano \
       nginx \
       php7.0 php7.0-ldap php7.0-xml \
       supervisor && \
