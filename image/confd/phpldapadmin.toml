@@ -1,0 +1,5 @@
+[template]
+src = "phpldapadmin.tmpl"
+dest = "/etc/phpldapadmin/config.php"
+keys = ["/"]
+check_cmd = "chown root:www-data {{.src}} && chmod u=rw,g=r,o= {{.src}}"

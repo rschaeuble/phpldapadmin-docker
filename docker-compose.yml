@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    image: rschaeuble/phpldapadmin
+    build: ./image/
+    ports:
+      - 18081:80
+    depends_on:
+      - ldap
+    environment:
+      LDAP_URL: ldap://ldap:389
+  ldap:
+    image: rschaeuble/openldap-server:0.1.0

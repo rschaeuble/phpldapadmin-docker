@@ -1,0 +1,28 @@
+<?php
+
+
+/* Use this array to map attribute names to user friendly names. For example, if
+   you don't want to see "facsimileTelephoneNumber" but rather "Fax". */
+// $config->custom->appearance['friendly_attrs'] = array();
+$config->custom->appearance['friendly_attrs'] = array(
+	'facsimileTelephoneNumber' => 'Fax',
+	'gid'                      => 'Group',
+	'mail'                     => 'Email',
+	'telephoneNumber'          => 'Telephone',
+	'uid'                      => 'User Name',
+	'userPassword'             => 'Password'
+);
+
+
+/*********************************************
+ * Define your LDAP servers in this section  *
+ *********************************************/
+
+$servers = new Datastore();
+
+$servers->newServer('ldap_pla');
+$servers->setValue('server','name','My LDAP Server');
+$servers->setValue('server','host','{{getv "/ldap/url"}}');
+$servers->setValue('login','auth_type','session');
+$servers->setValue('login','bind_id','{{getv "/ldap/admin"}}');
+?>
