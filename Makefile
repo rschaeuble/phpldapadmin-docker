@@ -1,6 +1,6 @@
 # Based on the Makefile from phusion/baseimage
 NAME = rschaeuble/phpldapadmin
-VERSION = latest
+VERSION = 0.0.1
 
 .PHONY: all build test tag_latest release ssh
 
