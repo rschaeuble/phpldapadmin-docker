@@ -23,6 +23,7 @@ $servers = new Datastore();
 $servers->newServer('ldap_pla');
 $servers->setValue('server','name','My LDAP Server');
 $servers->setValue('server','host','{{getv "/ldap/url"}}');
+$servers->setValue('server','base',array('{{getv "/ldap/base"}}'));
 $servers->setValue('login','auth_type','session');
 $servers->setValue('login','bind_id','{{getv "/ldap/admin"}}');
 ?>
